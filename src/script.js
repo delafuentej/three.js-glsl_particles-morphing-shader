@@ -138,18 +138,21 @@ let particles = null;
 gltfLoader
 .load('./models.glb',
     (gltf)=> {
-    /**
-     * Particles
-     */
+
+   
+    
         particles = {};
         //setting index property (Animate the progress)
         particles.index = 0;
     
         //Positions 
+       
        const positionsArr = gltf.scene.children.map((child) => {
-            // to become the position attribute=> BurrerAtribute: child.geometry.attributes.position// count = vertices
-            return child.geometry.attributes.position;
-        })
+        // to become the position attribute=> BurrerAtribute: child.geometry.attributes.position// count = vertices
+        return child.geometry.attributes.position;
+    })
+  
+        
         // this positionsArr cointain the vertices of 4 different objects, but none of them
         // have the exact same size(count)
         console.log('positionsArr',positionsArr);
