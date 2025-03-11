@@ -287,10 +287,12 @@ gui.add(particles.material.uniforms.uFrecuency, 'value')
     .step(0.001)
     .name('uFrecuency');
 
-    gui.add(particles, 'morph0');
-    gui.add(particles, 'morph1');
-    gui.add(particles, 'morph2');
-    gui.add(particles, 'morph3');
+const objectsTransformations = gui.addFolder('Transformations')
+
+objectsTransformations.add(particles, 'morph0');
+objectsTransformations.add(particles, 'morph1');
+objectsTransformations.add(particles, 'morph2');
+objectsTransformations.add(particles, 'morph3');
 
     
 });
